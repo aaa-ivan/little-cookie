@@ -1,6 +1,6 @@
 /**
 * Template Name: PhotoFolio
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
+* Updated: Jan 09 2024 with Bootstrap v5.3.2
 * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -78,22 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   });
-
-
-  const header = document.getElementById('header');
-
-  // Function to change header color when scrolling
-  function changeHeaderColorOnScroll() {
-      if (window.scrollY > 10) {
-          header.style.backgroundColor = 'rgba(0, 0, 0, 0.85)'; // Change color when scrolled down 50 pixels
-      } else {
-          header.style.backgroundColor = 'rgba(0, 0, 0, 0.0)'; // Revert to the initial color when at the top
-      }
-  }
-  
-  // Add an event listener to the window's scroll event
-  window.addEventListener('scroll', changeHeaderColorOnScroll);
-  
 
   /**
    * Scroll top button

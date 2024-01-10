@@ -1,6 +1,6 @@
 /**
 * Template Name: PhotoFolio
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
+* Updated: Jan 09 2024 with Bootstrap v5.3.2
 * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #27a776;
+  --color-primary: black;
   --color-secondary: #161718;
 }
 
@@ -35,7 +35,7 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
-  background-color: #FEFBEA;
+  background-color: #f3ebde;
 }
 
 a {
@@ -94,17 +94,6 @@ h6 {
   color: #fff;
 }
 
-@media (min-width: 992px){
-.col-lg-6 {
-    flex: 0 0 auto;
-    width: 80%;
-}
-}
-
-#hero {
-  background-image: url("../img/Banner.png");
-}
-
 /*--------------------------------------------------------------
 # Page Header
 --------------------------------------------------------------*/
@@ -149,10 +138,6 @@ h6 {
   background: #2cbc85;
 }
 
-.bi-instagram {
-  width: 50%;
-}
-
 /*--------------------------------------------------------------
 # Scroll top button
 --------------------------------------------------------------*/
@@ -163,7 +148,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--color-primary);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -177,7 +162,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background: rgba(0, 0, 0, 1);
+  background: rgba(39, 167, 118, 0.8);
   color: #fff;
 }
 
@@ -300,52 +285,7 @@ h6 {
 .header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 10px 0;
-  background-color: rgba(0, 0, 0, 0.0);
-}
-
-#header {
-  padding-top: 30px;
-}
-
-#header-title {
-  font-family: cursive;
-  font-size: 6vw;
-}
-
-#instagram-link {
-  width: 45%;
-  text-align: right;
-}
-
-@media (max-width: 1600px) {
-  #header-title {
-    font-size: 7vw;
-  }
-  .instagram-link {
-    width: 47%;
-  }
-
-}
-
-@media (max-width: 1000px) {
-  #header-title {
-    font-size: 8vw;
-  }
-
-  #instagram-link {
-    width: 50%;
-  }
-}
-
-@media (max-width: 600px) {
-  #header-title {
-    font-size: 10vw;
-  }
-  
-  #instagram-link {
-    width: 53%;
-  }
+  background-color: #000;
 }
 
 .header .logo {
@@ -353,7 +293,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 3%;
+  max-height: 100px;
   margin-right: 8px;
 }
 
@@ -362,7 +302,7 @@ h6 {
   margin: 0;
   font-weight: 400;
   color: #fff;
-  font-family: var(--font-secondary);
+  font-family: cursive;
 }
 
 .header .logo i {
@@ -381,21 +321,17 @@ h6 {
   }
 }
 
-.header-social-links {
-  width: 10vw;
-}
-
 .header .header-social-links {
   padding-right: 15px;
 }
 
 .header .header-social-links a {
-  color: rgba(255, 255, 255);
+  color: rgba(255, 255, 255, 0.5);
   padding-left: 15px;
   display: inline-block;
   line-height: 0px;
   transition: 0.3s;
-  font-size: 60px;
+  font-size: 16px;
 }
 
 .header .header-social-links a:hover {
@@ -532,16 +468,10 @@ h6 {
   }
 }
 
-@media screen and (max-width: 768px) {
-  #hero {
-    height: 100px; /* Change the height for larger screens */
-  }
-}
-
 /*--------------------------------------------------------------
 # Mobile Navigation
 --------------------------------------------------------------*/
-/* @media (max-width: 1279px) {
+@media (max-width: 1279px) {
   .navbar {
     position: fixed;
     top: 0;
@@ -646,7 +576,7 @@ h6 {
     background: rgba(22, 23, 24, 0.8);
     z-index: 9996;
   }
-} */
+}
 
 /*--------------------------------------------------------------
 # About Section
@@ -780,10 +710,6 @@ h6 {
   margin-top: 40px;
 }
 
-.gallery-item {
-  margin-bottom: 5%;
-}
-
 .gallery .gallery-item {
   position: relative;
   overflow: hidden;
@@ -791,7 +717,6 @@ h6 {
 }
 
 .gallery .gallery-item img {
-  max-width: 100%;
   height: auto;
   transition: 0.5s;
 }
@@ -834,7 +759,7 @@ h6 {
 }
 
 .gallery .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .glightbox-clean .gslide-description {
@@ -1248,21 +1173,22 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+#hero {
+  background-image: url("../img/Banner.png");
+}
+
 .hero {
   width: 100%;
-  max-height: 5vh;
+  min-height: 30vh;
   background: #000;
   background-size: cover;
   position: relative;
   padding: 140px 0 60px 0;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
 }
 
 .hero h2 {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 700;
   color: #fff;
   font-family: var(--font-secondary);
@@ -1302,12 +1228,13 @@ h6 {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.3s;
-  color: #fff;
-  background: var(--color-primary);
+  color: black;
+  background: #f3ebde
 }
 
 .hero .btn-get-started:hover {
-  background: #2cbc85;
+  background: black;
+  color: #f3ebde;
 }
 
 @media (max-width: 768px) {
@@ -1328,17 +1255,16 @@ h6 {
 
 .footer .copyright {
   text-align: center;
-  color: black;
+  color: black
 }
 
 .footer .credits {
   padding-top: 6px;
   text-align: center;
   font-size: 13px;
-  color: black;
+  color: black
 }
 
 .footer .credits a {
-  color: black;
-  font-weight: bold;
+  color: var(--color-primary);
 }
